@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Circulo de progresso</title>
+</head>
+<body>
+    <div class="box1"><!--Box 1-->
+        <h1>Circle</h1><!--Title-->
+        <h2>progress...</h2><!--Title-->
+        <input  id="numberProgress" type="number" placeholder="Digite um valor" min="1" max="100"><!--Input-->
+        <button onclick="go()">Enviar</button><!--Botão-->
+    </div>
+
+    <div class="box"><!--Box 2-->
+        <div class="box-circle"><!--Box interno-->
+            <svg><!--SVG-->
+                <circle cx="70" cy="70" r="70"></circle><!--Circle-->
+                <circle id="circleProgress" cx="70" cy="70" r="70"></circle><!--Circle-->
+            </svg>
+        </div>
+        <div class="number"></div><!--Number result-->
+    </div>
+    <script>/*Result*/
+        function go() {/*Function*/
+            var circle = document.querySelector('#circleProgress');/*Variável circle coleta valores para circleProgress*/
+            var number = document.querySelector('#numberProgress').value;/*Variável number armazena valor de Input*/
+        document.querySelector('.number').innerHTML = number + '%';/*Valor de input é jogado para number result*/
+        circle.style.strokeDashoffset = 440 - (440 * number) / 100;/*Calculo para porgresso ser exibido*/
+        }
+    </script>
+</body>
+</html>
