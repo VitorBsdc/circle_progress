@@ -1,0 +1,95 @@
+/*Corpo total*/
+body {/*Corpo do site total*/
+    font-family: 'Courier New';/*Fonte do site total*/
+    background-image: linear-gradient(90deg, #6441A5, #2a0845);/*Cor de fundo site*/
+}
+
+/*Title*/
+h1 {/*Title number 1*/
+    color: white;/*Cor fonte*/
+    font-size: 25px;/*Tamanho fonte*/
+    text-align: left;/*Alinhamento*/
+    margin-bottom: -10px;/*Margem abaixo*/
+}
+h2 {/*Title number 2*/
+    color: white;/*Cor fonte*/
+    font-size: 25px;/*Tamanho fonte*/
+    text-align: right;/*Alinhamento*/
+}
+
+/*Box 1*/
+.box1 {/*Box da inserção*/
+    position: absolute;/*Posição absoluta sobre os elementos*/
+    top: 25%;/*Distância acima*/
+    left: 50%;/*Distância à esquerda*/
+    transform: translate(-50%, -50%);/*Ajuste posiçâo*/
+    background-image: linear-gradient(90deg, #000000, #434343);/*Fundo Box 1*/
+    border-radius: 15px;/*Bordas redondas*/
+    padding: 20px;/*Distância entre as bordas*/
+    padding-bottom: 30px;/*Distância margem de baixo*/
+}
+input {/*Input*/
+    padding: 15px;/*Distância entre o texto e o input*/
+    border: none;/*Borda nula*/
+    outline: none;/*Linha de fora nula*/
+    border-radius: 15px;/*Bordas redondas*/
+    cursor: pointer;/*Cursor sobre o input*/
+    width: 120px;/*Largura do input*/
+}
+button {/*Botão*/
+    padding: 15px;/*Tamanho do botão*/
+    border: none;/*Borda nula*/
+    outline: none;/*Linha de fora nula*/
+    border-radius: 15px;/*Bordas redondas*/
+    cursor: pointer;/*Cursor sobre o botão*/
+    margin-top: 5px;/*Margem acima*/
+}
+button:hover {/*Cursor sobre o botão configuração*/
+    background-color: green;/*Cor do botão com cursor sobre*/
+    color: white;/*Cor da letra com cursor sobre*/
+}
+
+/*Box 2*/
+.box {/*Box do circulo*/
+    position: absolute;/*Posição absoluta sobre os elementos*/
+    top: 65%;/*Distância acima*/
+    left: 50%;/*Distância à esquerda*/
+    transform: translate(-50%, -50%);/*Ajuste posição*/
+    background-image: linear-gradient(90deg, #000000, #434343);/*Fundo Box 2*/
+    border-radius: 100px;/*Bordas redondas*/
+    padding: 15px;/*Distância entre as bordas*/
+}
+.box-circle {/*Box interno (circulo)*/
+    width: 150px;/*Largura*/
+    height: 150px;/*Altura*/
+    position: relative;/*Posição relativa*/
+}
+circle {/*Circulo em si*/
+    width: 150px;/*Largura*/
+    height: 150px;/*Altura*/
+    fill: none;/*I don't understand*/
+    stroke: black;/*Adicionar borda ao SVG*/
+    stroke-width: 10px;/*Definir largura da barra progresso*/
+    transform: translate(5px, 5px);/*Ajuste posição*/
+    stroke-dasharray: 440px;/*Sem progresso tamanho*/
+    stroke-dashoffset: 440px;/*Com progresso tamanho*/
+}
+circle:nth-child(1) {/*Circulo 1*/
+    stroke-dashoffset: 0;/*I don't understand*/
+    stroke: white;/*Cor sem progresso*/
+}
+circle:nth-child(2) {/*Circulo 2*/
+    stroke: purple;/*Cor do progresso*/
+    transition: stroke-dashoffset 0.8s;/*Funcionamento da barra*/
+}
+.number {/*Numero interno do box 2*/
+    position: absolute;/*Posição absoluta sobre elementos*/
+    top: 0;/*Acima*/
+    left: 0;/*Esquerda*/
+    width: 100%;/*Largura*/
+    height: 100%;/*Altura*/
+    display: flex;/*Display flexível*/
+    justify-content: center;/*Justificativa*/
+    align-items: center;/*Alinhar ao centro*/
+    color: white;/*Cor da fonte*/
+}
